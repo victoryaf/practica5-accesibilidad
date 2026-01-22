@@ -46,13 +46,13 @@ function showhide(control, elem){
   <span id="mis">mis</span><span id="libros">Libros</span> 
 </div>
 
-<p class="t1">Formulario de compra</p>
+<h1 class="t1">Formulario de compra</h1>
 
 <div id="pasos">
-<strong>Paso:</strong><img src="img/1.png" alt="1" /><img src="img/2on.png" alt="1" width="63" height="42" /><img src="img/3.png" alt="3" width="85" height="42" /></div>
+<strong>Paso:</strong><img src="img/1.png" alt="1" /><img src="img/2on.png" alt="2" width="63" height="42" /><img src="img/3.png" alt="3" width="85" height="42" /></div>
 
 <div id="imprimir">
-  <a href="javascript:print()" ><img src="img/iconPrint.gif" width="20" alt="Imprimir" /></a>
+  <a href="javascript:print()" ><img src="img/iconPrint.gif" width="20" alt="" /></a>
   <a href="javascript:print()">Imprimir</a>
 </div>
 
@@ -69,7 +69,7 @@ function showhide(control, elem){
 
 <div id="articulos">
 
-  <p class="t2">Cesta de la compra</p>
+  <h2 class="t2">Cesta de la compra</h2>
 
   <center>
   <p><strong>Artículos en la cesta de la compra</strong></p>
@@ -131,7 +131,7 @@ function showhide(control, elem){
 
 <div id="datos">
 
-  <p class="t2">Datos de facturación</p>
+  <h2 class="t2">Datos de facturación</h2>
 
   <p class="info"><span class="i">i</span> Los campos marcados en rojo son obligatorios.</p>
 
@@ -245,8 +245,8 @@ function showhide(control, elem){
   </div>
 
   <div id="lista_promociones">
-    <p>Sí, deseo recibir información sobre promociones de:</p>
-
+	<fieldset>
+		<legend>Sí, deseo recibir información sobre promociones de:</legend>
     <div class="grupo_check">
       <div>
         <input type="checkbox" name="prom" id="prom1" value="hispanoamericana">
@@ -289,6 +289,7 @@ function showhide(control, elem){
         <input type="checkbox" name="prom"  id="prom9" value="tecnico">
         <label for="prom9">Libro técnico</label> </div>
     </div>
+	</fieldset>
 
   </div>
 
@@ -316,9 +317,9 @@ function showhide(control, elem){
 
 <div id="garantias">
 
-  <p class="t2">Garantías</p>
+  <h2 class="t2">Garantías</h2>
 
-  <p class="t3">Devolución o anulación de pedido</p>
+  <h3 class="t3">Devolución o anulación de pedido</h3>
 
   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin condimentum, diam in porta ullamcorper, ipsum nisi venenatis dui, quis convallis purus lectus vel magna. Morbi consectetuer odio sed nibh. Sed turpis sapien, ultrices ac, condimentum eu, imperdiet sed, pede. Suspendisse potenti. Sed elit risus, accumsan eget, accumsan non, placerat ac, massa. Vivamus egestas, leo eget nonummy consectetuer, mi enim imperdiet lorem, ut rhoncus ligula diam at nisi. Morbi porta malesuada lorem. Donec euismod nunc venenatis purus. In cursus sagittis ipsum. Sed dapibus fermentum dolor. Quisque in lacus sit amet turpis adipiscing tristique. Aliquam elit. Mauris sit amet magna. Nulla id mi. Duis dui augue, porttitor id, pellentesque in, venenatis dapibus, ligula. </p>
 
@@ -329,15 +330,15 @@ function showhide(control, elem){
 
   <p>Donec congue. Donec dictum nisi eget nisl. Aenean sed arcu et tortor laoreet rhoncus. Mauris vulputate. Morbi pellentesque, nisi eget vestibulum luctus, enim mi iaculis risus, sit amet facilisis purus nulla quis elit. Sed velit turpis, eleifend in, ultricies non, egestas vulputate, urna. Ut ut tellus et metus auctor hendrerit. Aliquam in turpis. Aliquam rutrum mollis nulla. Sed quis pede. Quisque a massa. Quisque feugiat urna a metus. Nulla urna. Cras diam est, scelerisque ut, rutrum quis, luctus a, dolor.</p>
 
-  <p class="t3">Seguridad</p>
+  <h3 class="t3">Seguridad</h3>
 
   <p>Nam vitae risus eu risus eleifend blandit. Donec viverra. In at velit. Nullam in dolor. Vestibulum blandit sem ut purus. Fusce mattis est ut nibh. Fusce tellus nunc, ullamcorper ac, iaculis ac, auctor a, odio. Nullam egestas magna ut tortor. Vestibulum posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eu eros. </p>
 
-  <p class="t3">Privacidad</p>
+  <h3 class="t3">Privacidad</h3>
 
   <p>Vestibulum in leo. Nam leo. Phasellus nec sem. Etiam ultrices varius arcu. In justo felis, pulvinar id, tristique placerat, tincidunt vel, dui. Nunc eu ante. Vestibulum pede. Ut ultricies posuere tellus. Morbi tincidunt leo vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Etiam sagittis. Pellentesque sollicitudin. Aliquam in lectus sagittis neque iaculis luctus. Duis et lacus at diam interdum aliquet. Curabitur nulla sem, ullamcorper in, tincidunt non, luctus a, justo.</p>
 
-  <p class="t3">Pago contra reembolso</p>
+  <h3 class="t3">Pago contra reembolso</h3>
 
   <p>Cras ut risus accumsan magna condimentum dictum. Maecenas condimentum nisl. Integer sollicitudin, leo sodales tincidunt tristique, leo tortor consectetuer arcu, in lacinia dui augue a lectus. Maecenas sodales augue ut ligula. Vestibulum ante quam, hendrerit nec, adipiscing ac, posuere vel, nunc. Aenean suscipit dictum pede. Donec et quam. Nam faucibus, magna ut eleifend ultrices, metus sapien accumsan velit, quis tincidunt enim metus a leo. Nunc nonummy massa et eros. Mauris odio nibh, imperdiet sed, dictum at, tristique sed, lectus. Nam vestibulum tincidunt augue.</p>
 
@@ -357,6 +358,7 @@ function showhide(control, elem){
 </body>
 
 </html>
+
 
 
 
