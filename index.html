@@ -8,24 +8,31 @@
   <title>Mis libros</title>
   <link rel="stylesheet" type="text/css" href="estilos.css" media="all" />
 
-  <script type="text/javascript">
-    function showhide(control, elem){
-      if(control.value === "si"){
-        elem.style.display = "block"; // mostrar
-      } else {
-        elem.style.display = "none";  // ocultar
-      }
-    }
+<script type="text/javascript">
+function showhide(control, elem){
+  if(control.value === "si"){
+    elem.style.display = "block"; // mostrar
+  } else {
+    elem.style.display = "none";  // ocultar
+  }
+}
 
-    window.onload = function() {
-      showhide(document.getElementById('info_promociones'), document.getElementById('lista_promociones'));
-    };
-  </script>
+window.onload = function() {
+  showhide(document.getElementById('info_promociones'), document.getElementById('lista_promociones'));
+};
+</script>
+
 </head>
 
 <body>
 
 <main id="contenido">
+
+<!--
+************************************************
+*                  CABECERA                    *
+************************************************
+-->
 
 <header id="logo">
   <span id="mis">mis</span><span id="libros">Libros</span> 
@@ -33,145 +40,315 @@
 
 <h1 class="t1">Formulario de compra</h1>
 
+<div id="pasos">
+<strong>Paso:</strong><img src="img/1.png" alt="1" /><img src="img/2on.png" alt="2" width="63" height="42" /><img src="img/3.png" alt="3" width="85" height="42" /></div>
+
+<div id="imprimir">
+  <a href="javascript:print()" ><img src="img/iconPrint.gif" width="20" alt="mandar a imprimir" />Imprimir</a>
+</div>
+
+<div id="ayuda">
+  	<a href="vacio.html">
+  		<img src="img/help.gif" alt="Ayuda" width="30" />
+	</a>
+</div>
+
+<!--
+************************************************
+*      Contenido de la CESTA de la compra      *
+************************************************
+-->
+
+<section id="articulos">
+
+  <h2 class="t2">Cesta de la compra</h2>
+
+  <center>
+  <p><strong>Artículos en la cesta de la compra</strong></p>
+  </center>	
+	
+  <table id="tabla_compra">
+  <tr id="conceptos">
+    <td><b>Producto</b></td>
+  	 <td><b>PVP</b></td>
+    <td><b>Uds.</b></td>
+    <td><b>Eur.</b></td></tr>
+  <tr class="producto">
+    <td class="producto" id="id978842043022">
+	    <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=22012"><img src="img/978842043022.GIF" alt="Portada de Dónde viven los monstruos" />Dónde viven los monstruos</a>
+		de SENDAK, MAURICE.</p>
+	    <p>Editorial Alfaguara: Madrid, 1995.</p>
+	    <p>ISBN: 978-84-20430-22-5 	</p></td>
+    <td>13,45 &euro;</td>
+    <td><label for="a_uds">Unidades</label><input type="text" id="a_uds" name="a_uds" value="1" size="4" /></td>
+    <td>13,45 &euro;</td>
+  </tr>
+  <tr class="producto">	
+  	 <td class="producto" id="id978849638856">
+	    <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=25924"><img src="img/978849638856.GIF" alt="Portada de Los tres bandidos" />Los tres bandidos</a>
+		de UNGERER, TOMI.  </p>
+	    <p>Editorial Kalandraka: Sevilla 2007.</p>
+	    <p>ISBN 978-84-96388-56-7</p>
+	 </td>
+     <td>15,00 &euro;</td>
+    <td><label for="b_uds">Unidades</label><input type="text" id="b_uds" name="b_uds" value="1" size="4" /></td>
+    <td>15,00 &euro;</td>
+  </tr>
+  <tr class="producto">	
+  	<td class="producto" id="id978842418108">
+	  <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=40898"><img src="img/978842418108.GIF" alt="Portada de El día en que a mamá se le puso cara de tetera"/>El día  en que a mamá se le puso cara de tetera</a>
+	  de SAIZ, RAQUEL. </p>
+	  <p>OQO Editora: Pontevedra, 2007.</p>
+	  <p>ISBN: 978-84-96788-37-4  </p></td>
+    <td>12,50 &euro;</td>
+    <td><label for="c_uds">Unidades</label><input type="text" id="c_uds" name="c_uds" value="2" size="4" /></td>
+    <td>25,00 &euro;</td>
+  </tr>
+  <tr id="total">	
+  	 <td colspan="3" align="right"><b>Precio Total</b></td>
+    <td>53,45 &euro;</td>
+  </tr>
+  </table>
+	
+	<p id="info_en">Non european customers can request a VAT refund</p>
+	
+</section>
+
+<!--
+************************************************
+*             DATOS de facturación             *
+************************************************
+-->
+
 <section id="datos">
 
   <h2 class="t2">Datos de facturación</h2>
 
+  <p class="info"><span class="i">i</span> Los campos marcados en rojo son obligatorios.</p>
+
   <form action="vacio.html">
 
-    <table id="tabladatos">
-      <tr>
-        <td>
-          <div class="campo_form">
-            <label class="obligatorio" for="nombre">Nombre </label>
-            <input type="text" id="nombre" name="nombre" />
-          </div>
-        </td>
-        <td>
-          <div class="campo_form">
-            <label class="obligatorio" for="dir">Dirección </label>
-            <input type="text" id="dir" name="dir" />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="campo_form">
-            <label class="obligatorio" for="apellidos">Apellidos </label>
-            <input type="text" id="apellidos" name="apellidos" />
-          </div>
-        </td>
-        <td>
-          <div class="campo_form">
-            <label class="obligatorio" for="localidad">Localidad </label>
-            <input type="text" id="localidad" name="localidad" />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="campo_form">
-            <label class="obligatorio" for="email">e-mail </label>
-            <input type="text" id="email" name="email" />
-          </div>
-        </td>
-        <td>
-          <div class="campo_form">
-            <label class="obligatorio" for="provincia">Provincia </label>
-            <input type="text" id="provincia" name="provincia" />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="campo_form">
-            <label class="obligatorio" for="tlf">Tlf. de contacto </label>
-            <input type="text" id="tlf" name="tlf" />
-          </div>
-        </td>
-        <td>
-          <div class="campo_form">
-            <label for="horario">Horario de entrega </label>
-            <select name="horario" id="horario">    
-               <option value="all">Todo el día</option>    
-               <option value="a">De 9:00 a 14:00 horas</option>      
-               <option value="b">De 14:00 a 19:00 horas</option>      
-            </select>
-          </div>
-        </td>
-      </tr>
-    </table>
+  <table id="tabladatos">
+  <tr>
+    <td>
+      <p><strong>Datos personales</strong></p>
+    </td>
+    <td>
+      <p><strong>Datos de envío</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="campo_form">
+        <label for="empresa">Empresa </label>
+        <input type="text" id="empresa" name="empresa" />
+      </div>
+    </td>
+    <td>
+      <div class="campo_form">
+        <label class="obligatorio" for="dir">Dirección </label>
+        <input type="text" id="dir" name="dir" />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="campo_form">
+        <label class="obligatorio" for="nombre">Nombre </label>
+        <input type="text" id="nombre" name="nombre" />
+      </div>
+    </td>
+    <td>
+      <div class="campo_form">
+        <label class="obligatorio" for="localidad">Localidad </label>
+        <input type="text" id="localidad" name="localidad" />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="campo_form">
+        <label class="obligatorio" for="apellidos">Apellidos </label>
+        <input type="text" id="apellidos" name="apellidos" />
+      </div>
+    </td>
+    <td>
+      <div class="campo_form" >
+        <label class="obligatorio" for="provincia">Provincia </label>
+        <input type="text" id="provincia" name="provincia" />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="campo_form" >
+        <label class="obligatorio" for="email">e-mail </label>
+        <input type="text" id="email" name="email" />
+      </div>
+    </td>
+    <td>
+    	<div class="campo_form">
+        <label class="obligatorio" for="cp">CP </label>
+        <input type="text" id="cp" name="cp" />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="campo_form">
+        <label class="obligatorio" for="tlf">Tlf. de contacto </label>
+        <input type="text" id="tlf" name="tlf" />
+      </div>
+    </td>
+    <td>
+      <div class="campo_form">
+        <label for="horario">Horario de entrega </label>
+        <select name="horario" id="horario">    
+        	 <option value="all">Todo el día</option>    
+        	 <option value="a">De 9:00 a 14:00 horas</option>      
+        	 <option value="b">De 14:00 a 19:00 horas</option>      
+        </select>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="campo_form">
+        <label for="nif">NIF/CIF </label>
+        <input type="text" id="nif" name="nif" />
+      </div>
+    </td>
+    <td>
+    </td>
+  </tr>
+  </table>
 
-    <!-- Jump menu promociones -->
-    <div>
-      <label for="info_promociones">¿Desea recibir información sobre nuestras promociones?</label>
-      <select id="info_promociones" name="info_promociones" onchange="showhide(this, document.getElementById('lista_promociones'))">
-        <option value="si" selected>SI</option>
-        <option value="no">NO</option>
-      </select>
+  <div style="text-align:center; margin: 1em">
+    <img src="img/horizontal_separator.gif" alt="separador" width="400" height="3" />
+  </div>
+
+  <!--
+  Jump menu de promociones corregido para WAVE
+  -->
+  <div>
+    <label for="info_promociones">¿Desea recibir información sobre nuestras promociones?</label>
+    <select id="info_promociones" name="info_promociones" onchange="showhide(this, document.getElementById('lista_promociones'))">        	    
+      <option value="si" selected="selected">SI</option>      
+      <option value="no">NO</option>      
+    </select>
+  </div>
+
+  <div id="lista_promociones" style="display:block;">
+	<fieldset>
+		<legend>Seleccione los tipos de promociones que desea recibir:</legend>
+    <div class="grupo_check">
+      <div>
+        <input type="checkbox" name="prom" id="prom1" value="hispanoamericana">
+        <label for="prom1">Literatura hispano americana </label>
+      </div>
+      <div>
+        <input type="checkbox" name="prom" id="prom2" value="extranjera">
+        <label for="prom2">Literatura extanjera </label>
+      </div>
+      <div>
+        <input type="checkbox" name="prom" id="prom3" value="clasicosespannoles">
+        <label for="prom3">Clásicos españoles</label> </div>
     </div>
 
-    <div id="lista_promociones" style="display:block;">
-      <fieldset>
-        <legend>Seleccione los tipos de promociones que desea recibir:</legend>
-        
-        <div class="grupo_check">
-          <div>
-            <input type="checkbox" name="prom" id="prom1" value="hispanoamericana">
-            <label for="prom1">Literatura hispanoamericana</label>
-          </div>
-          <div>
-            <input type="checkbox" name="prom" id="prom2" value="extranjera">
-            <label for="prom2">Literatura extranjera</label>
-          </div>
-          <div>
-            <input type="checkbox" name="prom" id="prom3" value="clasicosespannoles">
-            <label for="prom3">Clásicos españoles</label>
-          </div>
-        </div>
-
-        <div class="grupo_check">
-          <div>
-            <input type="checkbox" name="prom" id="prom4" value="clasicosmundiales">
-            <label for="prom4">Clásicos mundiales</label>
-          </div>
-          <div>
-            <input type="checkbox" name="prom" id="prom5" value="biografia">
-            <label for="prom5">Biografía</label>
-          </div>
-          <div>
-            <input type="checkbox" name="prom" id="prom6" value="comic">
-            <label for="prom6">Cómic y novela gráfica</label>
-          </div>
-        </div>
-
-        <div class="grupo_check">
-          <div>
-            <input type="checkbox" name="prom" id="prom7" value="infantil">
-            <label for="prom7">Literatura infantil</label>
-          </div>
-          <div>
-            <input type="checkbox" name="prom" id="prom8" value="juvenil">
-            <label for="prom8">Literatura juvenil</label>
-          </div>
-          <div>
-            <input type="checkbox" name="prom" id="prom9" value="tecnico">
-            <label for="prom9">Libro técnico</label>
-          </div>
-        </div>
-
-      </fieldset>
+    <div class="grupo_check">
+      <div>
+        <input type="checkbox" name="prom"  id="prom4" value="clasicosmundiales">
+        <label for="prom4">Clásicos mundiales </label>
+      </div>
+      <div>
+        <input type="checkbox" name="prom"  id="prom5" value="biografia">
+        <label for="prom5">Biografía</label>
+      </div>
+      <div>
+        <input type="checkbox" name="prom"  id="prom6" value="comic"> 
+        <label for="prom6">Cómic y novela gráfica </label>
+      </div>
     </div>
 
-    <p id="submit">
-      <input type="submit" value="Realizar Pedido" />
-    </p>
+    <div class="grupo_check">
+      <div>
+        <input type="checkbox" name="prom"  id="prom7" value="infantil">
+        <label for="prom7">Literatura infantil </label>
+      </div>
+      <div>
+        <input type="checkbox" name="prom"  id="prom8" value="juvenil">
+        <label for="prom8">Literatura juvenil </label>
+      </div>
+      <div>
+        <input type="checkbox" name="prom"  id="prom9" value="tecnico">
+        <label for="prom9">Libro técnico</label> </div>
+    </div>
+	</fieldset>
+
+  </div>
+
+  <div id="div_captcha">
+    Escriba los siguientes caracteres: 
+    <img src="img/Captcha-ejemplo.jpg" alt="Captcha con caracteres" width="78" height="32" />
+    <input type="text" id="captcha" size="5" />
+	<label for="captcha">Caracteres</label>
+  </div>
+
+  <p id="submit">
+    <input type="submit" value="Realizar Pedido" />
+  </p>
 
   </form>
 
 </section>
 
+<!--
+************************************************
+*           Información de GARANTIAS           *
+************************************************
+-->
+
+<section id="garantias">
+
+  <h2 class="t2">Garantías</h2>
+
+  <h3 class="t3">Devolución o anulación de pedido</h3>
+
+  <p>Lorem ipsum dolor sit amet...</p>
+
+  <ol class="lista">
+	  <li>Nullam ut ante nec dolor aliquam auctor.</li>
+	  <li>Aenean ultrices elit id felis.</li>
+	  <li>Maecenas nec erat eget eros malesuada nonummy.</li>
+	  <li>Nulla facilisi.</li>
+  </ol>
+
+  <p>Donec congue...</p>
+
+  <h3 class="t3">Seguridad</h3>
+
+  <p>Nam vitae risus eu risus eleifend blandit...</p>
+
+  <h3 class="t3">Privacidad</h3>
+
+  <p>Vestibulum in leo...</p>
+
+  <h3 class="t3">Pago contra reembolso</h3>
+
+  <p>Cras ut risus accumsan magna condimentum dictum...</p>
+
+</section>
+
+<!--
+************************************************
+*                 PIE de página                *
+************************************************
+-->
+
+<footer id="pie">2017 - misLibros.</footer>
+
 </main>
 
 </body>
+
 </html>
