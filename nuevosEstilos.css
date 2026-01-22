@@ -12,7 +12,5 @@
 	color: #525200;
 }
 p {
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.5;
+  text-align: left;
 }
