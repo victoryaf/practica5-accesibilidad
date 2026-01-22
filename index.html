@@ -33,7 +33,7 @@ function showhide(control, elem){
 
 <body onload="showhide(document.getElementById('info_promociones'), document.getElementById('lista_promociones'))">
 
-<div id="contenido">
+<main id="contenido">
 
 
 <!--
@@ -42,9 +42,9 @@ function showhide(control, elem){
 ************************************************
 -->
 
-<div id="logo">
+<header id="logo">
   <span id="mis">mis</span><span id="libros">Libros</span> 
-</div>
+</header>
 
 <h1 class="t1">Formulario de compra</h1>
 
@@ -52,12 +52,13 @@ function showhide(control, elem){
 <strong>Paso:</strong><img src="img/1.png" alt="1" /><img src="img/2on.png" alt="2" width="63" height="42" /><img src="img/3.png" alt="3" width="85" height="42" /></div>
 
 <div id="imprimir">
-  <a href="javascript:print()" ><img src="img/iconPrint.gif" width="20" alt="" /></a>
-  <a href="javascript:print()">Imprimir</a>
+  <a href="javascript:print()" ><img src="img/iconPrint.gif" width="20" alt="mandar a imprimir" />Imprimir</a>
 </div>
 
 <div id="ayuda">
-  <img src="img/help.gif" alt="Ayuda" onclick="window.location='vacio.html'" width="30" />
+  	<a href="vacio.html">
+  		<img src="img/help.gif" alt="Ayuda" width="30" />
+	</a>
 </div>
 
 
@@ -67,7 +68,7 @@ function showhide(control, elem){
 ************************************************
 -->
 
-<div id="articulos">
+<section id="articulos">
 
   <h2 class="t2">Cesta de la compra</h2>
 
@@ -120,7 +121,7 @@ function showhide(control, elem){
 	
 	<p id="info_en">Non european customers can request a VAT refund</p>
 	
-</div>
+</section>
 
 
 <!--
@@ -129,7 +130,7 @@ function showhide(control, elem){
 ************************************************
 -->
 
-<div id="datos">
+<section id="datos">
 
   <h2 class="t2">Datos de facturación</h2>
 
@@ -306,7 +307,7 @@ function showhide(control, elem){
 
   </form>
 
-</div>
+</section>
 
 
 <!--
@@ -315,7 +316,7 @@ function showhide(control, elem){
 ************************************************
 -->
 
-<div id="garantias">
+<section id="garantias">
 
   <h2 class="t2">Garantías</h2>
 
@@ -323,10 +324,13 @@ function showhide(control, elem){
 
   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin condimentum, diam in porta ullamcorper, ipsum nisi venenatis dui, quis convallis purus lectus vel magna. Morbi consectetuer odio sed nibh. Sed turpis sapien, ultrices ac, condimentum eu, imperdiet sed, pede. Suspendisse potenti. Sed elit risus, accumsan eget, accumsan non, placerat ac, massa. Vivamus egestas, leo eget nonummy consectetuer, mi enim imperdiet lorem, ut rhoncus ligula diam at nisi. Morbi porta malesuada lorem. Donec euismod nunc venenatis purus. In cursus sagittis ipsum. Sed dapibus fermentum dolor. Quisque in lacus sit amet turpis adipiscing tristique. Aliquam elit. Mauris sit amet magna. Nulla id mi. Duis dui augue, porttitor id, pellentesque in, venenatis dapibus, ligula. </p>
 
-  <p class="lista">1. Nullam ut ante nec dolor aliquam auctor.<br />
-  2. Aenean ultrices elit id felis.<br />
-  3. Maecenas nec erat eget eros malesuada nonummy. <br />
-  4. Nulla facilisi. </p>
+  <ol class="lista">
+	  <li>Nullam ut ante nec dolor aliquam auctor.</li>
+	  <li>Aenean ultrices elit id felis.</li>
+	  <li>Maecenas nec erat eget eros malesuada nonummy.</li>
+	  <li>Nulla facilisi.</li>
+  </ol>
+
 
   <p>Donec congue. Donec dictum nisi eget nisl. Aenean sed arcu et tortor laoreet rhoncus. Mauris vulputate. Morbi pellentesque, nisi eget vestibulum luctus, enim mi iaculis risus, sit amet facilisis purus nulla quis elit. Sed velit turpis, eleifend in, ultricies non, egestas vulputate, urna. Ut ut tellus et metus auctor hendrerit. Aliquam in turpis. Aliquam rutrum mollis nulla. Sed quis pede. Quisque a massa. Quisque feugiat urna a metus. Nulla urna. Cras diam est, scelerisque ut, rutrum quis, luctus a, dolor.</p>
 
@@ -342,7 +346,7 @@ function showhide(control, elem){
 
   <p>Cras ut risus accumsan magna condimentum dictum. Maecenas condimentum nisl. Integer sollicitudin, leo sodales tincidunt tristique, leo tortor consectetuer arcu, in lacinia dui augue a lectus. Maecenas sodales augue ut ligula. Vestibulum ante quam, hendrerit nec, adipiscing ac, posuere vel, nunc. Aenean suscipit dictum pede. Donec et quam. Nam faucibus, magna ut eleifend ultrices, metus sapien accumsan velit, quis tincidunt enim metus a leo. Nunc nonummy massa et eros. Mauris odio nibh, imperdiet sed, dictum at, tristique sed, lectus. Nam vestibulum tincidunt augue.</p>
 
-</div>
+</section>
 
 
 <!--
@@ -351,13 +355,14 @@ function showhide(control, elem){
 ************************************************
 -->
 
-<p id="pie">2017 - misLibros.</p>
+<footer id="pie">2017 - misLibros.</footer>
 
-</div>
+</main>
 
 </body>
 
 </html>
+
 
 
 
