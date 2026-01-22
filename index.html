@@ -10,24 +10,29 @@
   <title>Mis libros</title>
   <link rel="stylesheet" type="text/css" href="estilos.css" media="all" />
 
-<script type="text/javascript">
-function showhide(control, elem){
-  var opcion=control.selectedIndex;
-  if (opcion==0){ 
-    elem.style.position = 'relative';
-    elem.style.left = '0px';
-    elem.style.width = '100%';
-    elem.style.height = '100%';
-    elem.style.overflow = 'visible';  
-  } else{ 
-    elem.style.position = 'absolute';
-    elem.style.left = '-9000px';
-    elem.style.width = '1px';
-    elem.style.height = '1px';
-    elem.style.overflow = 'hidden';  
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const select = document.getElementById('info_promociones');
+  const lista = document.getElementById('lista_promociones');
+
+  function actualizarLista() {
+    if (select.value === 'si') {
+      lista.style.display = 'block';        // Mostrar la lista
+      lista.setAttribute('aria-hidden', 'false'); // Para lectores de pantalla
+    } else {
+      lista.style.display = 'none';         // Ocultar la lista
+      lista.setAttribute('aria-hidden', 'true');
+    }
   }
-}
+
+  // Ejecutar al cargar la página
+  actualizarLista();
+
+  // Ejecutar cada vez que cambie la opción
+  select.addEventListener('change', actualizarLista);
+});
 </script>
+
 
 </head>
 
@@ -238,61 +243,64 @@ function showhide(control, elem){
   </div>
 
   <div>
-    <label for="info_promociones">¿Desea recibir información sobre nuestras promociones?</label>
-    <select id="info_promociones" name="info_promociones" onchange="showhide(this, document.getElementById('lista_promociones'))">        	    
-      <option value="si" selected="selected">SI</option>      
-      <option value="no">NO</option>      
-    </select>
-  </div>
+  <label for="info_promociones">¿Desea recibir información sobre nuestras promociones?</label>
+  <select id="info_promociones" name="info_promociones">
+    <option value="si" selected>SI</option>
+    <option value="no">NO</option>
+  </select>
+</div>
 
-  <div id="lista_promociones">
-	<fieldset>
-		<legend>Sí, deseo recibir información sobre promociones de:</legend>
+<div id="lista_promociones" aria-hidden="false">
+  <fieldset>
+    <legend>Seleccione los tipos de promociones que desea recibir:</legend>
+    
     <div class="grupo_check">
       <div>
         <input type="checkbox" name="prom" id="prom1" value="hispanoamericana">
-        <label for="prom1">Literatura hispano americana </label>
+        <label for="prom1">Literatura hispanoamericana</label>
       </div>
       <div>
         <input type="checkbox" name="prom" id="prom2" value="extranjera">
-        <label for="prom2">Literatura extanjera </label>
+        <label for="prom2">Literatura extranjera</label>
       </div>
       <div>
         <input type="checkbox" name="prom" id="prom3" value="clasicosespannoles">
-        <label for="prom3">Clásicos españoles</label> </div>
+        <label for="prom3">Clásicos españoles</label>
+      </div>
     </div>
 
     <div class="grupo_check">
       <div>
-        <input type="checkbox" name="prom"  id="prom4" value="clasicosmundiales">
-        <label for="prom4">Clásicos mundiales </label>
+        <input type="checkbox" name="prom" id="prom4" value="clasicosmundiales">
+        <label for="prom4">Clásicos mundiales</label>
       </div>
       <div>
-        <input type="checkbox" name="prom"  id="prom5" value="biografia">
+        <input type="checkbox" name="prom" id="prom5" value="biografia">
         <label for="prom5">Biografía</label>
       </div>
       <div>
-        <input type="checkbox" name="prom"  id="prom6" value="comic"> 
-        <label for="prom6">Cómic y novela gráfica </label>
+        <input type="checkbox" name="prom" id="prom6" value="comic">
+        <label for="prom6">Cómic y novela gráfica</label>
       </div>
     </div>
 
     <div class="grupo_check">
       <div>
-        <input type="checkbox" name="prom"  id="prom7" value="infantil">
-        <label for="prom7">Literatura infantil </label>
+        <input type="checkbox" name="prom" id="prom7" value="infantil">
+        <label for="prom7">Literatura infantil</label>
       </div>
       <div>
-        <input type="checkbox" name="prom"  id="prom8" value="juvenil">
-        <label for="prom8">Literatura juvenil </label>
+        <input type="checkbox" name="prom" id="prom8" value="juvenil">
+        <label for="prom8">Literatura juvenil</label>
       </div>
       <div>
-        <input type="checkbox" name="prom"  id="prom9" value="tecnico">
-        <label for="prom9">Libro técnico</label> </div>
+        <input type="checkbox" name="prom" id="prom9" value="tecnico">
+        <label for="prom9">Libro técnico</label>
+      </div>
     </div>
-	</fieldset>
 
-  </div>
+  </fieldset>
+</div>
 
   <div id="div_captcha">
     Escriba los siguientes caracteres: 
@@ -362,6 +370,7 @@ function showhide(control, elem){
 </body>
 
 </html>
+
 
 
 
