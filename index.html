@@ -8,19 +8,21 @@
 		<script type="text/javascript"> 
 			function showhide(control, elem){ 
 				var opcion=control.selectedIndex; 
-				if (opcion==0){ 
-					elem.style.position = 'relative'; 
-					elem.style.left = '0px'; 
-					elem.style.width = '100%'; 
-					elem.style.height = '100%'; 
-					elem.style.overflow = 'visible'; 
-				} else{ 
-					elem.style.position = 'absolute'; 
-					elem.style.left = '-9000px'; 
-					elem.style.width = '1px'; 
-					elem.style.height = '1px'; 
-					elem.style.overflow = 'hidden'; 
-				} } 
+				if(opcion == 0){
+				  elem.style.position = 'relative';
+				  elem.style.left = '0px';
+				  elem.style.width = '100%';
+				  elem.style.height = '100%';
+				  elem.style.overflow = 'visible';
+				  elem.setAttribute('aria-hidden', 'false');
+				} else {
+				  elem.style.position = 'absolute';
+				  elem.style.left = '-9000px';
+				  elem.style.width = '1px';
+				  elem.style.height = '1px';
+				  elem.style.overflow = 'hidden';
+				  elem.setAttribute('aria-hidden', 'true');
+				}} 
 		</script> 
 	</head> 
 	<body onload="showhide(document.getElementById('info_promociones'), document.getElementById('lista_promociones'))"> 
@@ -231,7 +233,7 @@
 							<option value="no">NO</option>
 						</select> 
 					</div> 
-					<div id="lista_promociones"> 
+					<div id="lista_promociones" aria-hidden="true"> 
 						<fieldset>
 							<legend>Sí, deseo recibir información sobre promociones de:</legend>
 							<div class="grupo_check"> <div> <input type="checkbox" name="prom" id="prom1" value="hispanoamericana">
@@ -316,3 +318,4 @@
 		</main> 
 	</body> 
 </html>
+
