@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="nuevosEstilos.css" media="all" /> 
 		<script type="text/javascript"> 
 			function showhide(control, elem) {
-			    var opcion = control.value; // usar value en lugar de selectedIndex
+			    var opcion = control.value;
 			    if(opcion === 'si'){
 			        elem.style.display = 'block';
 			        elem.setAttribute('aria-hidden', 'false');
@@ -225,12 +225,15 @@
 						    <option value="si" selected="selected">SI</option> 
 						    <option value="no">NO</option>
 						</select> 
-						<div id="lista_promociones" aria-hidden="true" style="display: block;"> 
-						<fieldset>
-							<legend>Sí, deseo recibir información sobre promociones de:</legend>
-							<div class="grupo_check"> <div> <input type="checkbox" name="prom" id="prom1" value="hispanoamericana">
-								<label for="prom1">Literatura hispano americana </label> 
-							</div> 
+						
+						<div id="lista_promociones" aria-hidden="true" style="display: none;"> 
+						    <fieldset>
+						        <legend>Sí, deseo recibir información sobre promociones de:</legend>
+						        <div class="grupo_check"> 
+								<div> 
+									<input type="checkbox" name="prom" id="prom1" value="hispanoamericana">
+									<label for="prom1">Literatura hispano americana </label> 
+								</div> 
 								<div> 
 									<input type="checkbox" name="prom" id="prom2" value="extranjera"> 
 									<label for="prom2">Literatura extanjera </label> 
@@ -310,6 +313,7 @@
 		</main> 
 	</body> 
 </html>
+
 
 
 
