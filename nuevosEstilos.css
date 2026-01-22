@@ -2,6 +2,9 @@
   font-size: 5px;
 	text-align: right;
 }
-.t2, .t3{
-	background-color:#525200;
+.t2{
+	background-color: #525200;
+}
+.t3{
+	color: #525200;
 }
